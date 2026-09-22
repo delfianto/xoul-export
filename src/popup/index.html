@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xoul Export</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <img src="/icons/icon48.png" alt="" class="logo" />
+      <div class="title-block">
+        <h1>Xoul Export</h1>
+        <span class="version">session dump</span>
+      </div>
+      <button id="btn-settings" type="button" class="ghost gear" title="Settings">Settings</button>
+    </header>
+
+    <main>
+      <section class="card">
+        <p class="kicker">Status</p>
+        <p id="status-text">Checking this tab…</p>
+        <p id="status-meta" class="meta" hidden></p>
+      </section>
+
+      <div class="actions">
+        <button id="btn-export" type="button" disabled>Export</button>
+      </div>
+
+      <p class="hint">
+        Saves into your Downloads folder using Settings (default
+        <code>~/Downloads/Xoul.ai</code>). Open a signed-in chat first.
+      </p>
+    </main>
+
+    <script type="module" src="./index.ts"></script>
+  </body>
+</html>

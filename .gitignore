@@ -1,0 +1,7 @@
+node_modules/
+build/
+*.xpi
+cookie.json
+*.cookie.json
+exports/
+.claude/settings.local.json

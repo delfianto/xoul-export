@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xoul Export settings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <img src="/icons/icon48.png" alt="" class="logo" />
+        <div>
+          <h1>Xoul Export</h1>
+          <p class="tag">Settings</p>
+        </div>
+      </header>
+
+      <section class="card">
+        <label class="field">
+          <span class="kicker">Download directory</span>
+          <span class="path">
+            <span class="prefix">~/Downloads/</span>
+            <input
+              id="downloadDirectory"
+              type="text"
+              spellcheck="false"
+              autocomplete="off"
+              placeholder="Xoul.ai"
+            />
+          </span>
+          <span class="hint">
+            Chrome can only write under your Downloads folder. Default
+            <code>Xoul.ai</code> saves to <code>~/Downloads/Xoul.ai</code> with no Save As dialog.
+          </span>
+        </label>
+      </section>
+
+      <section class="card">
+        <label class="field">
+          <span class="kicker">Filename pattern</span>
+          <input
+            id="filenamePattern"
+            class="solo"
+            type="text"
+            spellcheck="false"
+            autocomplete="off"
+            placeholder="{char}-{date_yymmdd}/{iso_date_time}.{ext}"
+          />
+          <span class="hint">
+            Slashes create subdirectories under the download folder. Default
+            <code>{char}-{date_yymmdd}/{iso_date_time}.{ext}</code>
+          </span>
+          <p id="pattern-preview" class="preview"></p>
+          <p class="tokens">
+            <code>{char}</code>
+            <code>{chars}</code>
+            <code>{persona}</code>
+            <code>{user}</code>
+            <code>{title}</code>
+            <code>{id}</code>
+            <code>{ext}</code>
+            <code>{date}</code>
+            <code>{date_yymmdd}</code>
+            <code>{date_yyyymmdd}</code>
+            <code>{iso_date}</code>
+            <code>{iso_date_time}</code>
+            <code>{time}</code>
+            <code>{year}</code>
+            <code>{month}</code>
+            <code>{day}</code>
+          </p>
+        </label>
+      </section>
+
+      <section class="card">
+        <p class="kicker">Export file formats</p>
+        <div class="checks">
+          <label><input id="fmt-json" type="checkbox" /> JSON</label>
+          <label><input id="fmt-markdown" type="checkbox" /> Markdown</label>
+          <label><input id="fmt-html" type="checkbox" /> HTML</label>
+          <label class="all"><input id="fmt-all" type="checkbox" /> All</label>
+        </div>
+        <p class="hint">
+          Unchecked formats are skipped. If none are ticked, all three are exported.
+        </p>
+      </section>
+
+      <p id="status" class="status" aria-live="polite"></p>
+    </main>
+    <script type="module" src="./index.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Xoul">
+  <!-- Geometry traced from https://xoul.ai/pwa-icon-512x512.png (hourglass + O). -->
+  <rect width="512" height="512" fill="#000"/>
+  <g fill="#fff">
+    <polygon points="108,182 238,182 173,259"/>
+    <polygon points="108,336 238,336 173,259"/>
+    <path
+      fill-rule="evenodd"
+      d="M338 177.5c35.6 0 64.5 36.5 64.5 81.5s-28.9 81.5-64.5 81.5-64.5-36.5-64.5-81.5 28.9-81.5 64.5-81.5zm0 40.5c-13.3 0-24 18.3-24 41s10.7 41 24 41 24-18.3 24-41-10.7-41-24-41z"
+    />
+  </g>
+</svg>
