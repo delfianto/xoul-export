@@ -118,13 +118,14 @@ you from mistakes it has been specifically introduced to.
 
 ## Permissions, explained before the browser does it ominously
 
-| Permission           | Why it exists                                                        |
-| -------------------- | -------------------------------------------------------------------- |
-| `activeTab` / `tabs` | Identify the open Xoul chat and its conversation ID.                 |
-| `cookies`            | Reuse your signed-in Xoul session; the auth cookie is HttpOnly.      |
-| `downloads`          | Save the resulting files without a ceremonial copy-and-paste.        |
-| `storage`            | Remember format, directory, and filename-pattern settings locally.   |
-| Xoul host access     | Request chat details, memories, history, and optional avatar images. |
+<!-- prettier-ignore -->
+| Permission | Why it exists |
+| --- | --- |
+| `activeTab` / `tabs` | Identify the open Xoul chat and its conversation ID. |
+| `cookies` | Reuse your signed-in Xoul session; the auth cookie is HttpOnly. |
+| `downloads` | Save the resulting files without a ceremonial copy-and-paste. |
+| `storage` | Remember format, directory, and filename-pattern settings locally. |
+| Xoul host access | Request chat details, memories, history, and optional avatar images. |
 
 Your session cookie is used to talk directly to `api.xoul.ai`; the extension does not send your
 export to a third-party server. The files remain wherever your browser puts downloads. You are,
@@ -132,11 +133,12 @@ naturally, still responsible for what happens to them after that.
 
 ## Output formats
 
-| Format   | Best for                          | Contents                                                                                   |
-| -------- | --------------------------------- | ------------------------------------------------------------------------------------------ |
-| Markdown | Reading, searching, and migration | Metadata, memories, speakers, timestamps, and message text.                                |
-| JSON     | Archival and future tooling       | Normalized messages plus raw messages and conversation details.                            |
-| HTML     | Opening the chat offline          | A self-contained styled page with escaped content and small inline avatars when available. |
+<!-- prettier-ignore -->
+| Format | Best for | Contents |
+| --- | --- | --- |
+| Markdown | Reading, searching, and migration | Metadata, memories, speakers, timestamps, and message text. |
+| JSON | Archival and future tooling | Normalized messages plus raw messages and conversation details. |
+| HTML | Opening the chat offline | A self-contained styled page with escaped content and small inline avatars when available. |
 
 ## Development
 
